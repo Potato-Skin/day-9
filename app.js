@@ -37,7 +37,30 @@ const todoList = document.querySelector("#todo");
 
 todoBtn.addEventListener("click", function () {
   const newLi = document.createElement("li");
+  newLi.classList.add("look-here");
+  newLi.addEventListener("click", function (event) {
+    event.target.classList.toggle("line");
+  });
   newLi.innerText = todoInput.value;
   todoList.appendChild(newLi);
+
   todoInput.value = "";
+});
+
+// want to get element by id -> document.getElementById
+// EVERYTHING ELSE -> querySelector || querySelectorAll (when i want a list)
+
+const allLookHere = document.querySelectorAll(".look-here");
+console.log("allLookHere:", allLookHere);
+
+allLookHere.forEach(function (listItem) {
+  // solution 1:
+  //   listItem.addEventListener("click", function () {
+  //     listItem.style.textDecoration = "line-through";
+  //   });
+
+  listItem.addEventListener("click", function (event) {
+    //  console.log("event:", event.target.classList);
+    event.target.classList.toggle("line");
+  });
 });

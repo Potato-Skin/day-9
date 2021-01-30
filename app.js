@@ -1,4 +1,4 @@
-const firstH1 = document.querySelector("h1");
+/* const firstH1 = document.querySelector("h1");
 const myList = document.querySelector("ul");
 const myButton = myList.querySelector("button");
 // const myButton = document.querySelector("button");
@@ -64,3 +64,4 @@ allLookHere.forEach(function (listItem) {
     event.target.classList.toggle("line");
   });
 });
+ */

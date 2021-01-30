@@ -1,3 +1,67 @@
+const input = document.querySelector("input");
+
+const addBtn = document.getElementById("add");
+const subBtn = document.getElementById("subtract");
+const multiBtn = document.getElementById("multiply");
+const divBtn = document.getElementById("divide");
+const eqBtn = document.getElementById("equals");
+let total = 0;
+
+// add event click listener to addBtn => take total, add whatever value is in input, clear input after
+addBtn.addEventListener("click", function () {
+  total += +input.value;
+  //   total += +value;
+  //   total += Number(value);
+  //   total += parseInt(value);
+  //   total += parseFloat(value);
+  input.value = 0;
+});
+// add event click listener to subBtn => take total, subtrat whatever value is in input, clear input after
+subBtn.addEventListener("click", function () {
+  total -= input.value;
+  input.value = 0;
+});
+
+// add event click listener to multiBtn => take total, multiply whatever value is in input, clear input after
+multiBtn.addEventListener("click", function () {
+  const value = +input.value;
+  total = total * value;
+  input.value = 0;
+});
+// add event click listener to divideBtn => take total, dividive whatever value is in input, clear input after
+divBtn.addEventListener("click", function () {
+  const value = +input.value;
+  total = total / value;
+  input.value = 0;
+});
+// add event listener to eqn btn, just display tht total in the input (for example)
+eqBtn.addEventListener("click", function () {
+  input.value = total;
+});
+
+/* 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ */
 /* const firstH1 = document.querySelector("h1");
 const myList = document.querySelector("ul");
 const myButton = myList.querySelector("button");
